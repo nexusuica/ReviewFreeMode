@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Review Free Mode",
+  "version": "0.0",
+
+  "description": "Remove Reviews for Your Truly Free Choice",
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.co.jp/*"],
+      "run_at": "document_end",
+      "js": ["amazonScript.js"]
+    },
+    {
+      "matches": ["https://tabelog.com/*"],
+      "run_at": "document_idle",
+      "js": ["tabelogScript.js"]
+    }
+  ]
+}
